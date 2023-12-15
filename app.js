@@ -29,8 +29,9 @@ function dragOver(evt) {
 
     const isHeader = evt.target.tagName === 'TH' || evt.target.parentElement.tagName === 'TH';
     const isInvalidDrop = evt.target.classList.contains('invalid-drop');
+    const hasItem = evt.target.hasChildNodes();
 
-    if (!isHeader && !isInvalidDrop) {
+    if (!isHeader && !isInvalidDrop && !hasItem) {
         evt.target.style.background = 'lightgray';
     }
 }
@@ -40,14 +41,19 @@ function dragEnter(evt) {
 
     const isHeader = evt.target.tagName === 'TH' || evt.target.parentElement.tagName === 'TH';
     const isInvalidDrop = evt.target.classList.contains('invalid-drop');
+    const hasItem = evt.target.querySelector('.item');
 
-    if (!isHeader && !isInvalidDrop) {
+    if (!isHeader && !isInvalidDrop && !hasItem) {
         evt.target.style.background = 'lightgray';
     }
 }
 
 function dragLeave(evt) {
-    evt.target.style.background = '';
+    const hasItem = evt.target.querySelector('.item');
+
+    if (!hasItem) {
+        evt.target.style.background = '';
+    }
 }
 
 function dragDrop(evt) {
