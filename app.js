@@ -1,6 +1,6 @@
 const greenBackground = '#36E502';
 const redBackground = '#DA3B04';
-const defaultBackground = ''; // Fondo blanco
+const defaultBackground = '';
 
 const items = document.querySelectorAll('.item');
 items.forEach(item => {
@@ -73,7 +73,6 @@ function dragDrop(evt) {
                 evt.target.style.background = redBackground;
             }
 
-            // Restablecer el color de la celda anterior
             if (currentDraggedItem) {
                 const previousCell = currentDraggedItem.parentElement;
                 previousCell.style.background = defaultBackground;
@@ -85,5 +84,5 @@ function dragDrop(evt) {
         evt.target.appendChild(currentDraggedItem);
     }
 
-    currentDraggedItem = null; // Restablecer el ítem actualmente arrastrado
+    currentDraggedItem = null;
 }
