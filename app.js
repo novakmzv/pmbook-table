@@ -55,6 +55,21 @@ function dragDrop(evt) {
 
     if (!isHeader && !isInvalidDrop) {
         const data = evt.dataTransfer.getData('text');
-        evt.target.appendChild(document.getElementById(data));
+        const draggedItem = document.getElementById(data);
+
+        if (draggedItem) {
+            const cellClass = evt.target.className;
+            const itemId = draggedItem.id;
+
+            if (cellClass === itemId) {
+                evt.target.style.background = 'green';
+            } else {
+                evt.target.style.background = 'red';
+            }
+        } else {
+            evt.target.style.background = 'red';
+        }
+
+        evt.target.appendChild(draggedItem);
     }
 }
