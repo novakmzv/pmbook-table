@@ -1,0 +1,47 @@
+:root {
+    --table-header-main-color: #31859d;
+    --table-name-color: #94cadf;
+}
+
+main {
+    margin: 20px 0 0 20px;
+}
+
+#items {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.item {
+    width: 130px;
+    height: 50px;
+    background: #ddd;
+    border: 1px solid #888;
+    margin: 5px;
+    color: black;
+    font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    width: 80px;
+    height: 50px;
+    border: 1px solid #000;
+    color: whitesmoke;
+}
+
+.invalid-drop {
+    background-color: var(--table-header-main-color);
+}
+
+td.invalid-drop.table-name {
+    background-color: var(--table-name-color);
+}
+
+.row-width {
+    min-width: 150px;
+    text-align: center;
+}
