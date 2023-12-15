@@ -1,3 +1,7 @@
+//color constants
+const greenBackground = '#36E502'
+const redBackground = '#DA3B04'
+
 const items = document.querySelectorAll('.item');
 items.forEach(item => {
     item.addEventListener('dragstart', dragStart);
@@ -62,12 +66,12 @@ function dragDrop(evt) {
             const itemId = draggedItem.id;
 
             if (cellClass === itemId) {
-                evt.target.style.background = 'green';
+                evt.target.style.background = greenBackground;
             } else {
-                evt.target.style.background = 'red';
+                evt.target.style.background = redBackground;
             }
         } else {
-            evt.target.style.background = 'red';
+            evt.target.style.background = redBackground;
         }
 
         evt.target.appendChild(draggedItem);
