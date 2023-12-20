@@ -64,10 +64,11 @@ function dragDrop(evt) {
         const draggedItem = document.getElementById(data);
 
         if (draggedItem) {
-            const cellClass = evt.target.className;
+            let cellClass = evt.target.className;
+            cellClass = cellClass.split('|')
             const itemId = draggedItem.id;
 
-            if (cellClass === itemId) {
+            if (cellClass.includes(itemId)) {
                 evt.target.style.background = greenBackground;
             } else {
                 evt.target.style.background = redBackground;
