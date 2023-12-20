@@ -1,0 +1,69 @@
+# Archivos y directorios generados por el sistema operativo
+.DS_Store
+Thumbs.db
+
+# Carpetas generadas por IDEs
+.idea/
+.vscode/
+
+# Archivos de construcción y salida
+build/
+dist/
+node_modules/
+
+# Logs y archivos temporales
+*.log
+*.tmp
+
+# Configuración específica del usuario
+*.iml
+*.user
+*.suo
+*.idea/
+
+# Archivos de configuración
+*.config
+*.conf
+
+# Archivos de compilación
+*.class
+*.war
+*.ear
+
+# Dependencias y paquetes
+*.jar
+*.zip
+*.tar.gz
+
+# Ambientes virtuales
+venv/
+.env/
+
+# Configuración de herramientas
+.idea
+.vscode
+*.sublime-project
+*.sublime-workspace
+
+# Entornos y configuración específicos de lenguajes
+*.pyc
+*.pyo
+__pycache__/
+*.dll
+*.exe
+
+# Log de prueba
+test.log
+
+# Archivos de imágenes y multimedia
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.ico
+*.mp3
+*.mp4
+*.avi
+*.pdf
+
+
