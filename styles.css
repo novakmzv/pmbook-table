@@ -17,6 +17,7 @@ body {
 }
 
 main {
+    min-width: 1200px;
     margin: 20px 0 0 20px;
 }
 
@@ -28,16 +29,19 @@ h1 {
 
 #items {
     display: flex;
+    padding: 15px;
     gap: 8px;
-    overflow-x: auto;
     margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .item {
-    overflow-y: auto;
     padding: 2px;
-    width: 200px;
-    max-height: 50px;
+    max-width: 200px;
+    max-height: 100px;
     background: var(--items-bg-color);
     color: var(--items-color);
     font-family: 'Lato', sans-serif;
