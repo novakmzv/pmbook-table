@@ -1,5 +1,5 @@
 const greenBackground = '#36E502';
-const redBackground = '#DA3B04';
+const redBackground = '#FF0000';
 const defaultBackground = '';
 
 const items = document.querySelectorAll('.item');
