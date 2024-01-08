@@ -13,7 +13,7 @@
     <h1>Lista de items</h1>
     <div id="items">
         <div class="item text-xs" id="A-item1" draggable="true">Desarrollar el acta de constitución del proyecto</div>
-        <div class="item text-xs" id="A-item2" draggable="true">Desarrollar el Plan para la Dirección del Proyecto</div>
+        <div class="item text-xs" id="A-item2" draggable="true">Desarrollar el Plan para la Dirección del Proyecto(PDP)</div>
         <div class="item text-xs" id="A-item3.1" draggable="true">Dirigir y Gestionar el Trabajo del Proyecto</div>
         <div class="item text-xs" id="A-item3.2" draggable="true">Gestionar el Conocimiento del Proyecto</div>
         <div class="item text-xs" id="A-item5" draggable="true">Cerrar Proyecto o Fase</div>
@@ -21,6 +21,31 @@
         <div class="item text-xs" id="B-item2.2" draggable="true">Recopilar Requisitos</div>
         <div class="item text-xs" id="B-item2.3" draggable="true">Definir el Alcance</div>
         <div class="item text-xs" id="B-item2.4" draggable="true">Crear la EDT</div>
+        <div class="item text-xs" id="C-item2.1" draggable="true">Planificar la Gestión del cronograma</div>
+        <div class="item text-xs" id="C-item2.2" draggable="true">Definir las actividades</div>
+        <div class="item text-xs" id="C-item2.3" draggable="true">Secuenciar las actividades</div>
+        <div class="item text-xs" id="C-item2.4" draggable="true">Estimar la Duración de las actividadesa</div>
+        <div class="item text-xs" id="C-item2.5" draggable="true">Desarrollar el Cronograma</div>
+        <div class="item text-xs" id="D-item2.1" draggable="true">Planificar la Gestión de los Costos</div>
+        <div class="item text-xs" id="D-item2.2" draggable="true">Estimar los Costos</div>
+        <div class="item text-xs" id="D-item2.3" draggable="true">Determinar el Presupuesto</div>
+        <div class="item text-xs" id="E-item2" draggable="true">Planificar la Gestión de la Calidad</div>
+        <div class="item text-xs" id="F-item2.1" draggable="true">Planificar la Gestión de los Recursos</div>
+        <div class="item text-xs" id="F-item2.2" draggable="true">Estimar los Recursos de las actividades</div>
+        <div class="item text-xs" id="H-item2.1" draggable="true">Planificar la Gestión de Riesgos</div>
+        <div class="item text-xs" id="H-item2.2" draggable="true">Identificar los Riesgos</div>
+        <div class="item text-xs" id="H-item2.3" draggable="true">Realizar analisis Cualitativo de Riesgos</div>
+        <div class="item text-xs" id="H-item2.4" draggable="true">Realizar analisis Cuantitativo de Riesgos</div>
+        <div class="item text-xs" id="H-item2.5" draggable="true">Planificar la Respuesta a los Riesgos</div>
+        <div class="item text-xs" id="G-item3" draggable="true">Gestionar las Comunicaciones</div>
+        <div class="item text-xs" id="H-item3" draggable="true">Implementar la respuesta a los Riesgos</div>
+        <div class="item text-xs" id="I-item3" draggable="true">Efectuar las Adquisiciones</div>
+        <div class="item text-xs" id="A-item4.1" draggable="true">Monitorear y Controlar el Trabajo del Proyecto</div>
+        <div class="item text-xs" id="A-item4.2" draggable="true">Realizar el Control integrado de Cambios</div>
+        <div class="item text-xs" id="F-item4" draggable="true">Controlar los Recursos</div>
+        <div class="item text-xs" id="G-item4" draggable="true">Monotorizar las Comunicaciones</div>
+        <div class="item text-xs" id="H-item4" draggable="true">Monotorizar los Riesgos</div>
+        <div class="item text-xs" id="I-item4" draggable="true">Controlar las Adquisiciones</div>
         <div class="item text-xs" id="C-item4" draggable="true">Controlar el Cronograma</div>
         <div class="item text-xs" id="D-item4" draggable="true">Controlar los Costos</div>
         <div class="item text-xs" id="E-item4" draggable="true">Controlar la Calidad</div>
@@ -54,29 +79,29 @@
             <td class="A-item1"></td>
             <td class="A-item2"></td>
             <td class="A-item3.1|A-item3.2"></td>
-            <td class="A-item4"></td>
+            <td class="A-item4.1|A-item4.2"></td>
             <td class="A-item5"></td>
         </tr>
         <tr>
             <td class="invalid-drop" draggable="false" ondragover="dragOver()" ondrop="dragDrop()">Gestión del Alcance del Proyecto</td>
             <td class="B-item1"></td>
             <td class="B-item2.1|B-item2.2|B-item2.3|B-item2.4"></td>
-            <td class="B-item3"></td>
+            <td class="B-item3.1|B-item3.2|B-item3.3|B-item3.4|B-item3.5"></td>
             <td class="B-item4.1|B-item4.2"></td>
             <td class="B-item5"></td>
         </tr>
         <tr>
             <td class="invalid-drop" draggable="false" ondragover="dragOver()" ondrop="dragDrop()">Gestión del Cronograma del Proyecto</td>
             <td class="C-item1"></td>
-            <td class="C-item2"></td>
-            <td class="C-item3"></td>
+            <td class="C-item2.1|C-item2.2|C-item2.3|C-item2.4|C-item2.5"></td>
+            <td class="C-item3.1|C-item3.2|C-item3.3|C-item3.4|C-item3.5"></td>
             <td class="C-item4"></td>
             <td class="C-item5"></td>
         </tr>
         <tr>
             <td class="invalid-drop" draggable="false" ondragover="dragOver()" ondrop="dragDrop()">Gestión de los Costes del Proyecto</td>
             <td class="D-item1"></td>
-            <td class="D-item2"></td>
+            <td class="D-item2.1|D-item2.2|D-item2.3"></td>
             <td class="D-item3"></td>
             <td class="D-item4"></td>
             <td class="D-item5"></td>
@@ -92,7 +117,7 @@
         <tr>
             <td class="invalid-drop" draggable="false" ondragover="dragOver()" ondrop="dragDrop()">Gestión de los Recursos del Proyecto</td>
             <td class="F-item1"></td>
-            <td class="F-item2"></td>
+            <td class="F-item2.1|F-item2.2"></td>
             <td class="F-item3.1|F-item3.2|F-item3.3"></td>
             <td class="F-item4"></td>
             <td class="F-item5"></td>
@@ -108,7 +133,7 @@
         <tr>
             <td class="invalid-drop" draggable="false" ondragover="dragOver()" ondrop="dragDrop()">Gestión de los Riesgos del Proyecto</td>
             <td class="H-item1"></td>
-            <td class="H-item2"></td>
+            <td class="H-item2.1|H-item2.2|H-item2.3|H-item2.4|H-item2.5"></td>
             <td class="H-item3"></td>
             <td class="H-item4"></td>
             <td class="H-item5"></td>

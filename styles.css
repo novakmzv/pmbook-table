@@ -8,17 +8,13 @@
     --home-bg: #fff;
 }
 
-.item::-webkit-scrollbar {
-    width: 0;
-}
-
 body {
     background-color: var(--home-bg);
 }
 
 main {
     min-width: 1200px;
-    margin: 20px 0 0 20px;
+    margin: 20px;
 }
 
 h1 {
@@ -40,8 +36,10 @@ h1 {
 
 .item {
     padding: 2px;
-    max-width: 200px;
+    min-width: 200px;
+    max-width: 400px;
     max-height: 100px;
+    min-height: 40px;
     background: var(--items-bg-color);
     color: var(--items-color);
     font-family: 'Lato', sans-serif;
@@ -56,10 +54,8 @@ h1 {
 }
 
 td .item {
-    margin: auto auto;
-    padding: 5px;
+    margin: auto 15px;
 }
-
 
 table {
     border-collapse: collapse;
