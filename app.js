@@ -29,16 +29,6 @@ function dragEnd(evt) {
 
 function dragOver(evt) {
     evt.preventDefault();
-
-    const isHeader = evt.target.tagName === 'TH' || evt.target.parentElement.tagName === 'TH';
-    const isInvalidDrop = evt.target.classList.contains('invalid-drop');
-    const hasItem = evt.target.querySelector('.item');
-
-    if (!isHeader && !isInvalidDrop) {
-        if (!hasItem) {
-            evt.target.style.background = 'lightgray';
-        }
-    }
 }
 
 function dragEnter(evt) {
@@ -46,44 +36,43 @@ function dragEnter(evt) {
 }
 
 function dragLeave(evt) {
-    const hasItem = evt.target.querySelector('.item');
 
-    if (!hasItem) {
-        evt.target.style.background = defaultBackground;
-    }
 }
 
 function dragDrop(evt) {
+
     evt.preventDefault();
+    const htmlTDCell = getParentTD(evt.target);
 
-    const isHeader = evt.target.tagName === 'TH' || evt.target.parentElement.tagName === 'TH';
-    const isInvalidDrop = evt.target.classList.contains('invalid-drop');
-
-    if (!isHeader && !isInvalidDrop) {
-        const data = evt.dataTransfer.getData('text');
-        const draggedItem = document.getElementById(data);
-
-        if (draggedItem) {
-            let cellClass = evt.target.className;
-            cellClass = cellClass.split('|')
-            const itemId = draggedItem.id;
-
-            if (cellClass.includes(itemId)) {
-                evt.target.style.background = greenBackground;
-            } else {
-                evt.target.style.background = redBackground;
-            }
-
-            if (currentDraggedItem) {
-                const previousCell = currentDraggedItem.parentElement;
-                previousCell.style.background = defaultBackground;
-            }
-        } else {
-            evt.target.style.background = redBackground;
-        }
-
-        evt.target.appendChild(currentDraggedItem);
+    if (!htmlTDCell) {
+        currentDraggedItem = null;
+        return
     }
 
-    currentDraggedItem = null;
+    const data = evt.dataTransfer.getData('text');
+    const draggedItem = document.getElementById(data);
+
+    debugger
+    if (draggedItem) {
+        let cellClass = htmlTDCell.className.split(' ');
+        let arrayItemIDs = cellClass.find(str => str.startsWith('key='));
+        arrayItemIDs =arrayItemIDs.replace('key=','')
+
+        arrayItemIDs = arrayItemIDs.split('|')
+        const itemId = draggedItem.id;
+
+        currentDraggedItem.style.background = arrayItemIDs.includes(itemId) ? greenBackground : redBackground;
+    } else {
+        htmlTDCell.style.background = redBackground;
+    }
+
+    htmlTDCell.appendChild(currentDraggedItem);
+}
+
+function getParentTD(element) {
+    if (element.tagName === 'TD') {
+        return element;
+    }
+
+    return getParentTD(element.parentElement);
 }
